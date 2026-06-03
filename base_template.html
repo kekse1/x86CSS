@@ -1182,9 +1182,6 @@ SUB, ADD
 
 @function --V-TEST(--w <integer>) returns <integer> {
   result: if(style(--w:1):-100;else:--and(var(--instArg1), var(--instArg2)));
-  --epic: --and(0, 0);
-  --epic: var(--instArg1);
-  result: if(style(--w:1):-100;else:var(--epic));
 }
 
 @function --D-OR(--w <integer>) returns <integer> { result: --TARGET1(var(--w)); }

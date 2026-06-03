@@ -144,6 +144,11 @@ for i,inst in enumerate(b2i):
 				continue
 
 		filtered_args = [x for x in inst[1:] if len(x)]
+		if inst_data["name"] == "TEST" and inst[0] == "GRP3a":
+			filtered_args.append("Ib")
+			print(1337,inst,filtered_args)
+		if inst_data["name"] == "TEST" and inst[0] == "GRP3b":
+			filtered_args.append("Iv")
 		for arg in filtered_args:
 			arg_size = get_arg_size(arg, 0)
 			if arg_size == "M":
